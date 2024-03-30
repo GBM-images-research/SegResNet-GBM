@@ -1,5 +1,5 @@
 {
-    "root_dir": "/Users/Maxy/Desktop/GBM/SegResNet/SegResNet-GBM/Data",
+    "root_dir": "/home/psalmon/SegResNet_Testing_Brats/SegResNet-GBM/Data",
     "train": {
         "init_filters": 16,
         "dropout_prob": 0.2,

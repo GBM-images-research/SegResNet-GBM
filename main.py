@@ -17,6 +17,6 @@ def main(config_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train Convolutional Neural Network for Brain Tumor Segmentation")
-    parser.add_argument("--config", default="/Users/Maxy/Desktop/GBM/SegResNet/SegResNet-GBM/config_file.json", help="Path to configuration file")
+    parser.add_argument("--config", default="/home/psalmon/SegResNet_Testing_Brats/SegResNet-GBM/config_file.json", help="Path to configuration file")
     args = parser.parse_args()
     main(args.config)
