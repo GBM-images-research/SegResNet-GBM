@@ -1,0 +1,15 @@
+{
+    "root_dir": "/Users/Maxy/Desktop/GBM/SegResNet/SegResNet-GBM/Data",
+    "train": {
+        "init_filters": 16,
+        "dropout_prob": 0.2,
+        "max_epochs": 2,
+        "lrate": 1e-4,
+        "weight_decay": 1e-5,
+        "batch_size": 1,
+        "threshold": 0.5,
+        "use_scaler": true,
+        "use_autocast": true
+    },
+    "wandb_api_key": "01c54ce2751fbe1574c7d3f0004d623f0f51de26"
+}
