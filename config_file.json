@@ -3,7 +3,7 @@
     "train": {
         "init_filters": 16,
         "dropout_prob": 0.2,
-        "max_epochs": 150,
+        "max_epochs": 2,
         "lrate": 1e-4,
         "weight_decay": 1e-5,
         "batch_size": 1,
