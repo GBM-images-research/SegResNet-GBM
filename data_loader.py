@@ -87,10 +87,10 @@ def get_data_loaders(root_dir):
 )
 
 
-    train_ds = DecathlonDataset(root_dir=root_dir, task="Task01_BrainTumour", transform=train_transform, section="training", download=True, cache_rate=0.0, num_workers=2)
+    train_ds = DecathlonDataset(root_dir=root_dir, task="Task01_BrainTumour", transform=train_transform, section="training", download=False, cache_rate=0.0, num_workers=2)
     train_loader = DataLoader(train_ds, batch_size=1, shuffle=True, num_workers=2)
 
-    val_ds = DecathlonDataset(root_dir=root_dir, task="Task01_BrainTumour", transform=val_transform, section="validation", download=True, cache_rate=0.0, num_workers=2)
+    val_ds = DecathlonDataset(root_dir=root_dir, task="Task01_BrainTumour", transform=val_transform, section="validation", download=False, cache_rate=0.0, num_workers=2)
     val_loader = DataLoader(val_ds, batch_size=1, shuffle=False, num_workers=2)
 
     return train_loader, val_loader
