@@ -13,7 +13,7 @@ def main(config_file):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     train_loader, val_loader = get_data_loaders(config["root_dir"])
     model = get_model_and_train_components(config["train"], device)
-    train_model(model, train_loader, val_loader, config["train"], config["wandb_api_key"])
+    train_model(model, train_loader, val_loader, config["train"], config["wandb_api_key"], config["root_dir"])
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train Convolutional Neural Network for Brain Tumor Segmentation")

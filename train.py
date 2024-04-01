@@ -8,7 +8,7 @@ from monai.metrics import DiceMetric
 from monai.inferers import sliding_window_inference
 from monai.handlers.utils import from_engine
 
-def train_model(model, train_loader, val_loader, config_train, wandb_api_key):
+def train_model(model, train_loader, val_loader, config_train, wandb_api_key, data_path):
     best_metric = 1
     best_metric_epoch = -1
     epoch_loss_values = []
@@ -80,7 +80,7 @@ def train_model(model, train_loader, val_loader, config_train, wandb_api_key):
         if epoch_loss < best_metric:
             best_metric = epoch_loss
             best_metric_epoch = epoch + 1
-            best_model_file = os.path.join(config_train["root_dir"], "best_metric_model.pth")
+            best_model_file = os.path.join(data_path, "best_metric_model.pth")
             torch.save(model.state_dict(), best_model_file)
             torch.cuda.empty_cache()
             print("Saved new best metric model")
